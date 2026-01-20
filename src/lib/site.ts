@@ -2,7 +2,7 @@ export const SITE = {
   name: "Midwest Investor Services",
   domain: "midwestinvestorservices.com",
   url: "https://midwestinvestorservices.com",
-  phone: "636-201-1239",
+  phone: "6365907698",
   email: "info@midwestinvestorservices.com",
   city: "St. Louis",
   region: "Missouri",

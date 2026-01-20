@@ -38,3 +38,7 @@ Replace the iframe `src` in `src/app/contact/page.tsx` with your Calendly event 
 You can still override these via Vercel env vars if desired:
 - NEXT_PUBLIC_FORMSPREE_FORM_ID (or NEXT_PUBLIC_FORMSPREE_INVESTOR_ENDPOINT)
 - NEXT_PUBLIC_FORMSPREE_DEAL_FORM_ID (or NEXT_PUBLIC_FORMSPREE_DEAL_ENDPOINT)
+
+
+## Build note (Vercel)
+This project is intended for Vercel/Next.js server builds. If you previously set `output: "export"` in `next.config.mjs`, remove it for Vercel deploys. The sitemap route is marked `force-static` for compatibility.
