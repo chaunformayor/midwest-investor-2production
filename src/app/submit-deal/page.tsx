@@ -16,6 +16,11 @@ export default function SubmitDeal() {
           Have a property that fits a buy-and-hold investor profile? Submit it below.
         </p>
       </div>
+      <div className="mt-4">
+        <a className="text-sm font-semibold text-zinc-900 underline underline-offset-4" href="/deal-criteria.pdf" target="_blank" rel="noreferrer">
+          Download our Deal Criteria (PDF)
+        </a>
+      </div>
 
       <Section
         title="Deal details"

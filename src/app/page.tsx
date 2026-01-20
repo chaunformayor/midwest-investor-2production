@@ -15,10 +15,10 @@ export default function Home() {
             Midwest-focused • Out-of-state investor friendly
           </div>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Welcome to MIS — your Midwest real estate investment partner.
+            Midwest rental real estate, executed by operators—not marketers.
           </h1>
           <p className="mt-4 text-base sm:text-lg text-zinc-600">
-            We offer a host of services from pre‑purchase walkthroughs and analysis through rehab, stabilization, and long‑term management—so your investment journey is smooth and successful.
+            We help investors acquire, renovate, and operate buy-and-hold rental properties in St. Louis and across the Midwest. Our focus is execution, cash flow, and long-term asset control.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Button href="/contact#schedule" variant="primary">
@@ -95,6 +95,34 @@ export default function Home() {
     >
       View services for investors →
     </a>
+  </div>
+</Section>
+
+
+<Section
+  title="What we do"
+  description="We work with investors who want results, not theory."
+>
+  <div className="grid gap-4 md:grid-cols-3">
+    {[
+      {
+        title: "Deal screening",
+        body: "We focus on fundamentals first. If the numbers don’t work, the deal stops there."
+      },
+      {
+        title: "Rehab execution",
+        body: "Scope, budget, and timeline discipline—managed locally with clear accountability."
+      },
+      {
+        title: "Operations & management",
+        body: "Tenant placement and long-term management built to protect cash flow and asset condition."
+      }
+    ].map((c) => (
+      <div key={c.title} className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-soft">
+        <div className="font-semibold">{c.title}</div>
+        <div className="mt-2 text-sm text-zinc-600">{c.body}</div>
+      </div>
+    ))}
   </div>
 </Section>
 

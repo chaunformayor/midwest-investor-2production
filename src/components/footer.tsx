@@ -32,7 +32,8 @@ export function Footer() {
                 <Link className="text-zinc-700 hover:text-zinc-900" href="/invest">
                   Invest
                 </Link>
-                <Link className="text-zinc-700 hover:text-zinc-900" href="/contact">
+                <Link className="text-zinc-700 hover:text-zinc-900" href="/portal">Portal</Link>
+              <Link className="text-zinc-700 hover:text-zinc-900" href="/contact">
                   Contact
                 </Link>
               </div>

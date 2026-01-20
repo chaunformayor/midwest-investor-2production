@@ -42,3 +42,43 @@ You can still override these via Vercel env vars if desired:
 
 ## Build note (Vercel)
 This project is intended for Vercel/Next.js server builds. If you previously set `output: "export"` in `next.config.mjs`, remove it for Vercel deploys. The sitemap route is marked `force-static` for compatibility.
+
+
+## Node.js version
+This project is locked to **Node.js 20** via `.nvmrc` and `package.json` engines. Ensure Vercel Node version is set to 20.x.
+
+## Deal Criteria PDF auto-reply (Formspree)
+Configure autoresponders in Formspree (dashboard):
+
+1) Open your form → Settings → Autoresponse.
+2) Add link to: https://midwestinvestorservices.com/deal-criteria.pdf
+3) Suggested subject: "MIS Deal Criteria + Next Steps"
+4) Suggested body: "Thanks for reaching out. Here is our Deal Criteria PDF. If your deal fits, reply with photos/inspection notes and timeline to close."
+
+The PDF is included at `public/deal-criteria.pdf`.
+
+## Private Investor Portal (password-gated)
+Routes:
+- `/portal/login` (enter access code)
+- `/portal` (resources)
+
+Set this env var in Vercel:
+- `PORTAL_PASSWORD` (access code)
+
+The middleware enforces the gate for `/portal/*` by checking a secure httpOnly cookie.
+
+## Formspree → Zoho CRM (webhook)
+API routes included:
+- POST `/api/formspree/investor`
+- POST `/api/formspree/deal`
+
+### Vercel env vars required
+- `ZOHO_CLIENT_ID`
+- `ZOHO_CLIENT_SECRET`
+- `ZOHO_REFRESH_TOKEN`
+
+### Formspree webhook setup
+In each Formspree form:
+1) Integrations/Webhooks → Add webhook URL
+2) Investor list form → `https://midwestinvestorservices.com/api/formspree/investor`
+3) Deal submissions form → `https://midwestinvestorservices.com/api/formspree/deal`

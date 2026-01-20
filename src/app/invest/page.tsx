@@ -14,10 +14,9 @@ export default function Invest() {
   return (
     <Container>
       <div className="max-w-3xl">
-        <h1 className="text-4xl font-semibold tracking-tight">Invest with an operator team in {SITE.city}.</h1>
+        <h1 className="text-4xl font-semibold tracking-tight">Work with a local operator team built for buy-and-hold investors.</h1>
         <p className="mt-4 text-lg text-zinc-600">
-          Our focus is disciplined buy-and-hold—helping you secure your future through real estate investment. We help investors source opportunities, execute rehab when needed, and manage
-          for long-term performance.
+          We partner with investors who value discipline, transparency, and long-term performance. If you’re chasing quick flips or unrealistic returns, we’re not a fit.
         </p>
       </div>
 
